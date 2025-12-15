@@ -6,7 +6,7 @@
 #    By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/04 12:41:15 by dtimofee          #+#    #+#              #
-#    Updated: 2025/12/15 12:57:49 by dtimofee         ###   ########.fr        #
+#    Updated: 2025/12/15 14:48:15 by dtimofee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,8 @@ CC = c++;
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = file_conversion
-SRCS = main.cpp replace.cpp print_error_msg.cpp
+NAME = harlFilter
+SRCS = main.cpp Harl.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)

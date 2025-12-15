@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   replace.hpp                                        :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/14 14:16:25 by dtimofee          #+#    #+#             */
-/*   Updated: 2025/12/15 12:52:19 by dtimofee         ###   ########.fr       */
+/*   Created: 2025/12/15 12:59:03 by dtimofee          #+#    #+#             */
+/*   Updated: 2025/12/15 15:09:13 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef REPLACE_HPP
-# define REPLACE_HPP
+#include "Harl.hpp"
 
-#include <string>
+int main(int argc, char **argv)
+{
+	Harl log;
 
-std::string replace_str(std::string text, std::string s1, std::string s2);
-
-
-#endif
+	if (argc != 2)
+	{
+		std::cerr << "Correct usage: " << argv[0] << "<level>" << std::endl;
+		return 1;
+	}
+	std::string level = argv[1];
+	log.complain(level);
+}

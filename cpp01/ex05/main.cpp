@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   replace.hpp                                        :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/14 14:16:25 by dtimofee          #+#    #+#             */
-/*   Updated: 2025/12/15 12:52:19 by dtimofee         ###   ########.fr       */
+/*   Created: 2025/12/15 12:59:03 by dtimofee          #+#    #+#             */
+/*   Updated: 2025/12/15 14:45:00 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef REPLACE_HPP
-# define REPLACE_HPP
+#include "Harl.hpp"
 
-#include <string>
+int main(void)
+{
+	Harl log;
 
-std::string replace_str(std::string text, std::string s1, std::string s2);
-
-
-#endif
+	log.complain("DEBUG");
+	log.complain("INFO");
+	log.complain("WARNING");
+	log.complain("ERROR");
+	log.complain("WARNING");
+}

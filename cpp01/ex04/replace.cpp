@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   replace.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dtimofee <dtimofee@student.42berlin.de>    #+#  +:+       +#+        */
+/*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-12-14 14:16:29 by dtimofee          #+#    #+#             */
-/*   Updated: 2025-12-14 14:16:29 by dtimofee         ###   ########.fr       */
+/*   Created: 2025/12/14 14:16:29 by dtimofee          #+#    #+#             */
+/*   Updated: 2025/12/15 12:45:23 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,3 @@ std::string replace_str(std::string text, std::string s1, std::string s2)
 	newText += text.substr(i);
 	return newText;
 }
-	// while ((pos = text.find(s1)) != std::string::npos)
-	// {
-	// 	text = (text.substr(0, pos) + s2 + text.substr(pos + s1.length()));
-	// }
-	// return text;

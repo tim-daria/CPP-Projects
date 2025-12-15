@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dtimofee <dtimofee@student.42berlin.de>    #+#  +:+       +#+        */
+/*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-12-14 11:55:15 by dtimofee          #+#    #+#             */
-/*   Updated: 2025-12-14 11:55:15 by dtimofee         ###   ########.fr       */
+/*   Created: 2025/12/14 11:55:15 by dtimofee          #+#    #+#             */
+/*   Updated: 2025/12/15 15:07:00 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
 #include "replace.hpp"
+#include "print_error_msg.hpp"
 
 int main(int argc, char** argv)
 {
@@ -29,12 +30,11 @@ int main(int argc, char** argv)
 
 	if (filename.size() == 0 || s1.size() == 0 || s2.size() == 0)
 	{
-		std::cerr << "Parameters can not be empty" << std::endl;
-		return 1;
+		return (print_err_msg("Parameters can not be empty"));
 	}
 	if (!std::ifstream (filename))
 	{
-		std::cerr << "File does not exist" << std::endl;
+		return (print_err_msg("File does not exist"));
 	}
 	std::ifstream myReadFile(filename);
 	std::ofstream myWriteFile(filename + newFileName);

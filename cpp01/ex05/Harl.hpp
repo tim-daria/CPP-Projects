@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   replace.hpp                                        :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/14 14:16:25 by dtimofee          #+#    #+#             */
-/*   Updated: 2025/12/15 12:52:19 by dtimofee         ###   ########.fr       */
+/*   Created: 2025/12/15 12:59:06 by dtimofee          #+#    #+#             */
+/*   Updated: 2025/12/15 13:04:40 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef REPLACE_HPP
-# define REPLACE_HPP
+#ifndef HARL_HPP
+# define HARL_HPP
 
 #include <string>
+#include <iostream>
 
-std::string replace_str(std::string text, std::string s1, std::string s2);
+class Harl
+{
+	private:
+	void debug(void);
+	void info(void);
+	void warning(void);
+	void error(void);
 
+	public:
+	Harl();
+	void complain(std::string level);
+};
 
 #endif
