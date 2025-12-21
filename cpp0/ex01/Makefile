@@ -6,7 +6,7 @@
 #    By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/04 12:41:15 by dtimofee          #+#    #+#              #
-#    Updated: 2025/12/15 12:38:56 by dtimofee         ###   ########.fr        #
+#    Updated: 2025/11/29 18:16:24 by dtimofee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,13 +15,17 @@ CC = c++;
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = phonebook
-SRCS = phonebook.cpp, contact.cpp, main.cpp
+SRCS = Phonebook.cpp Contact.cpp main.cpp add_contact.cpp search_phonebook.cpp
 OBJS = $(SRCS:.cpp=.o)
+
 
 all: $(NAME)
 
+$(NAME): $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
+
 %.o: %.cpp
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)
