@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.hpp"
 #include <iomanip>
+#include "Phonebook.hpp"
 
 PhoneBook::PhoneBook() : num_contacts(0), index(0) {};
 
