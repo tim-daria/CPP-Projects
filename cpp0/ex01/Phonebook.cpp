@@ -15,7 +15,7 @@
 
 PhoneBook::PhoneBook() : num_contacts(0), index(0) {};
 
-const int& PhoneBook::get_num_contacts() const {
+int PhoneBook::get_num_contacts() const {
 	return num_contacts;
 }
 
@@ -60,12 +60,6 @@ void PhoneBook::display_phonebook()
 	}
 }
 
-void PhoneBook::display_contact(int index)
-{
-	Contact contact = contacts[index];
-	std::cout << "First name: " << contact.get_firstname() << std::endl;
-	std::cout << "Last name: " << contact.get_lastname() << std::endl;
-	std::cout << "Nickname: " << contact.get_nickname() << std::endl;
-	std::cout << "Phone number: " << contact.get_phonenumber() << std::endl;
-	std::cout << "Darkest secret: " << contact.get_darkest_secret() << std::endl;
+void PhoneBook::display_contact(int index) {
+	contacts[index].display();
 }

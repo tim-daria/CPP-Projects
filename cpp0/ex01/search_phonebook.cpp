@@ -33,7 +33,7 @@ void search_in_phonebook(PhoneBook &phonebook)
 	std::cout << "Type the index of the contact you want to display" << std::endl;
 	while (true)
 	{
-		if (!std::getline(std::cin,input))
+		if (!std::getline(std::cin, input))
 			return ;
 		if (!is_correct_number(input)) {
 			continue;

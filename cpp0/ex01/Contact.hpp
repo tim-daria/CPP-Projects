@@ -38,6 +38,8 @@ class Contact
 	void set_nickname(const std::string &value);
 	void set_phonenumber(const std::string &value);
 	void set_darkest_secret(const std::string &value);
+
+	void display();
 };
 
 #endif

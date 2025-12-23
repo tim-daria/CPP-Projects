@@ -26,7 +26,7 @@ class PhoneBook
 
 	public:
 	PhoneBook();
-	const int &get_num_contacts() const;
+	int get_num_contacts() const;
 	void save_new_contact(Contact &contact);
 	void display_phonebook();
 	void display_contact(int index);

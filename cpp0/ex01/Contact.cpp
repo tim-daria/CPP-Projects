@@ -44,3 +44,12 @@ void Contact::set_phonenumber(const std::string &value) {
 void Contact::set_darkest_secret(const std::string &value) {
 	darkest_secret = value;
 }
+
+void Contact::display()
+{
+	std::cout << "First name: " << get_firstname() << std::endl;
+	std::cout << "Last name: " << get_lastname() << std::endl;
+	std::cout << "Nickname: " << get_nickname() << std::endl;
+	std::cout << "Phone number: " << get_phonenumber() << std::endl;
+	std::cout << "Darkest secret: " << get_darkest_secret() << std::endl;
+}

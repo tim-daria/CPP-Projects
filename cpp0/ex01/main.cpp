@@ -36,7 +36,6 @@ int	main(void)
 			break ;
 		else
 			continue;
-
 	}
 	return (0);
 }

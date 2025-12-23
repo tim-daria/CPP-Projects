@@ -10,9 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-CC = c++;
+CXX = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = phonebook
 SRCS = Phonebook.cpp Contact.cpp main.cpp add_contact.cpp search_phonebook.cpp
