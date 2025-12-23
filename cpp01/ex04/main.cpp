@@ -28,13 +28,11 @@ int main(int argc, char** argv)
 	std::string text;
 	std::string newFileName = ".replace";
 
-	if (filename.size() == 0 || s1.size() == 0 || s2.size() == 0)
-	{
+	if (filename.size() == 0 || s1.size() == 0 || s2.size() == 0) {
 		return (print_err_msg("Parameters can not be empty"));
 	}
-	if (!std::ifstream (filename))
-	{
-		return (print_err_msg("File does not exist"));
+	if (!std::ifstream(filename)) {
+		return (print_err_msg("File does not exist or no read permission"));
 	}
 	std::ifstream myReadFile(filename);
 	std::ofstream myWriteFile(filename + newFileName);

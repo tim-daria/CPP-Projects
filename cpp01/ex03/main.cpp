@@ -15,7 +15,7 @@
 #include "HumanB.hpp"
 
 
-int main()
+int main(void)
 {
 	{
 		Weapon club = Weapon("crude spiked club");
@@ -27,6 +27,7 @@ int main()
 	{
 		Weapon club = Weapon("crude spiked club");
 		HumanB jim("Jim");
+		jim.attack();
 		jim.setWeapon(club);
 		jim.attack();
 		club.setType("some other type of club");

@@ -13,22 +13,22 @@
 #include <iostream>
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name)
-{
-	this->name = name;
-}
+HumanB::HumanB(const std::string &name): name(name) {};
 
-HumanB::~HumanB()
-{
-	std::cout << this->name << " has been destroyed." << std::endl;
+HumanB::~HumanB() {
+	std::cout << name << " has been destroyed." << std::endl;
 }
 
 void HumanB::attack(void)
 {
-	std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
+	if (weapon) {
+		std::cout << name << " attacks with their " << weapon->getType() << std::endl;
+	}
+	else {
+		std::cout << name << " attacks with their bare hands" << std::endl;
+	}
 }
 
-void HumanB::setWeapon(Weapon& weapon)
-{
+void HumanB::setWeapon(Weapon& weapon) {
 	this->weapon = &weapon;
 }

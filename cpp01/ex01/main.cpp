@@ -25,13 +25,13 @@ int main(void)
 	std::cin >> zombieName;
 	std::cout << "Enter the number of zombies in your horde:" << std::endl;
 	std::cin >> N;
-	Zombie* Horde = zombieHorde(N, zombieName);
-	if (!Horde)
+	Zombie* horde = zombieHorde(N, zombieName);
+	if (!horde)
 	{
 		std::cout << "Invalid number of zombies." << std::endl;
 		return (0);
 	}
 	for (int i = 0; i < N; i++)
-		Horde[i].announce();
-	delete []Horde;
+		horde[i].announce();
+	delete []horde;
 }

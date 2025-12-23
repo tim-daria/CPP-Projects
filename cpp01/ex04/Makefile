@@ -10,9 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-CC = c++;
+CXX = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = file_conversion
 SRCS = main.cpp replace.cpp print_error_msg.cpp
