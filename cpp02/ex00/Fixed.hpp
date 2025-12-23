@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dtimofee <dtimofee@student.42berlin.de>    #+#  +:+       +#+        */
+/*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-12-22 16:45:54 by dtimofee          #+#    #+#             */
-/*   Updated: 2025-12-22 16:45:54 by dtimofee         ###   ########.fr       */
+/*   Created: 2025/12/22 16:45:54 by dtimofee          #+#    #+#             */
+/*   Updated: 2025/12/23 15:52:25 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-class Fixed {
+class Fixed
+{
 	private:
-	int value;
+	int fixedValue;
 	static const int numBits;
 
 	public:
@@ -21,6 +22,7 @@ class Fixed {
 	Fixed(const Fixed &other);
 	Fixed &operator=(const Fixed &other);
 	~Fixed();
+
 	int getRawBits( void ) const;
 	void setRawBits( int const raw );
 };

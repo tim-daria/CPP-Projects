@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dtimofee <dtimofee@student.42berlin.de>    #+#  +:+       +#+        */
+/*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-12-22 16:44:34 by dtimofee          #+#    #+#             */
-/*   Updated: 2025-12-22 16:44:34 by dtimofee         ###   ########.fr       */
+/*   Created: 2025/12/22 16:44:34 by dtimofee          #+#    #+#             */
+/*   Updated: 2025/12/23 15:52:41 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int main( void )
 {
 	Fixed a;
-	Fixed b( a );
+	Fixed b(a);
 	Fixed c;
 
 	c = b;
