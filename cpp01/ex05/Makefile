@@ -10,9 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-CC = c++;
+CXX = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = logging
 SRCS = main.cpp Harl.cpp
