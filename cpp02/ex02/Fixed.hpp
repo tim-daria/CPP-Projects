@@ -19,6 +19,9 @@ class Fixed {
 	int fixedValue;
 	static const int numBits;
 
+	private:
+	void setFixedValue(const int value);
+
 	public:
 	Fixed();
 	Fixed(const int input);
@@ -27,6 +30,26 @@ class Fixed {
 	~Fixed();
 
 	Fixed &operator=(const Fixed &other);
+	bool operator>(const Fixed &other);
+	bool operator>=(const Fixed &other);
+	bool operator<(const Fixed &other);
+	bool operator<=(const Fixed &other);
+	bool operator==(const Fixed &other);
+	bool operator!=(const Fixed &other);
+
+	Fixed operator+(const Fixed &obj);
+	Fixed operator-(const Fixed &obj);
+	Fixed operator*(const Fixed &obj);
+	Fixed operator/(const Fixed &obj);
+	Fixed &operator++();
+	Fixed &operator--();
+	Fixed operator++(int);
+	Fixed operator--(int);
+
+	static Fixed &min(Fixed &first, Fixed &second);
+	static const Fixed &min(const Fixed &first, const Fixed &second);
+	static Fixed &max(Fixed &first, Fixed &second);
+	static const Fixed &max(const Fixed &first, const Fixed &second);
 
 	float toFloat(void) const;
 	int toInt(void) const;

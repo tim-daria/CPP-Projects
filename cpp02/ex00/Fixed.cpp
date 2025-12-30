@@ -11,16 +11,16 @@
 /* ************************************************************************** */
 
 #include <iostream>
-#include <string.h>
+#include <string>
 #include "Fixed.hpp"
 
-const int numBits = 8;
+const int Fixed::numBits = 8;
 
 Fixed::Fixed(): fixedValue(0) {
 	std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &other){
+Fixed::Fixed(const Fixed &other) {
 	std::cout << "Copy constructor called" << std::endl;
 	fixedValue = other.getRawBits();
 }
@@ -34,7 +34,7 @@ Fixed &Fixed::operator=(const Fixed &other)
 	return *this;
 }
 
-Fixed::~Fixed(){
+Fixed::~Fixed() {
 	std::cout << "Destructor called" << std::endl;
 }
 
