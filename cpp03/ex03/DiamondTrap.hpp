@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dtimofee <dtimofee@student.42berlin.de>    #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-12-28 12:48:26 by dtimofee          #+#    #+#             */
-/*   Updated: 2025-12-28 12:48:26 by dtimofee         ###   ########.fr       */
+/*   Created: 2025-12-30 19:26:36 by dtimofee          #+#    #+#             */
+/*   Updated: 2025-12-30 19:26:36 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef DIAMONDTRAP_HPP
+# define DIAMONDTRAP_HPP
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-class FragTrap: public ClapTrap
+class DiamondTrap: public ScavTrap, public FragTrap
 {
-	public:
-	FragTrap();
-	FragTrap(const std::string &name);
-	FragTrap(const FragTrap &other);
-	FragTrap &operator=(const FragTrap &other);
-	~FragTrap();
+	private:
+	std::string name;
 
-	void highFivesGuys(void);
+	public:
+	DiamondTrap();
+	DiamondTrap(const std::string &name);
+	DiamondTrap(const DiamondTrap &other);
+	DiamondTrap &operator=(const DiamondTrap &other);
+	~DiamondTrap();
+
+	using ScavTrap::attack;
+	void whoAmI();
 };
 
 #endif

@@ -29,6 +29,19 @@ ScavTrap::ScavTrap(const ScavTrap &other): ClapTrap(other) {
 	std::cout << "Copy constructor ScavTrap called" << std::endl;
 }
 
+ScavTrap &ScavTrap::operator=(const ScavTrap &other)
+{
+	std::cout << "Copy assignment operator ScavTrap called" << std::endl;
+	if (this != &other)
+	{
+		name = other.name;
+		hitPoints = other.hitPoints;
+		energyPoints = other.energyPoints;
+		attackDamage = other.attackDamage;
+	}
+	return *this;
+}
+
 ScavTrap::~ScavTrap() {
 	std::cout << "Destructor ScavTrap called" << std::endl;
 }
