@@ -59,7 +59,7 @@ void ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	if (amount > static_cast<unsigned int>(hitPoints)) {
+	if (amount > hitPoints) {
 		hitPoints = 0;
 	}
 	else {

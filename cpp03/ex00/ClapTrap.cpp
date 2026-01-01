@@ -23,7 +23,6 @@ ClapTrap::ClapTrap(const std::string &name):
 	std::cout << "Constructor ClapTrap(const std::string) called" << std::endl;
 }
 
-
 ClapTrap::ClapTrap(const ClapTrap &other):
 	name(other.name), hitPoints(other.hitPoints),
 	energyPoints(other.energyPoints), attackDamage(other.attackDamage) {
@@ -60,7 +59,7 @@ void ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	if (amount > static_cast<unsigned int>(hitPoints)) {
+	if (amount > hitPoints) {
 		hitPoints = 0;
 	}
 	else {
