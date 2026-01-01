@@ -31,8 +31,6 @@ int main(void)
 
 	Fixed c = a / b;
 	std::cout << c << std::endl;
-	c = Fixed(0);
-	std::cout << a << " / " << c << " = " << (a / c) << std::endl;
 	std::cout << (a + b) << std::endl;
 	std::cout << (a - b) << std::endl;
 	std::cout << (a == b) << std::endl;

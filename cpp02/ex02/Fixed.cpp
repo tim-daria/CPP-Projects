@@ -101,7 +101,7 @@ Fixed Fixed::operator*(const Fixed &obj)
 {
 	Fixed sum;
 
-	sum.setFixedValue((fixedValue >> numBits) * obj.fixedValue);
+	sum.setFixedValue((fixedValue * obj.fixedValue) >> numBits);
 	return sum;
 }
 
