@@ -14,7 +14,8 @@
 # define FIXED_HPP
 
 
-class Fixed {
+class Fixed
+{
 	private:
 	int fixedValue;
 	static const int numBits;
@@ -27,9 +28,9 @@ class Fixed {
 	Fixed(const int input);
 	Fixed(const float input);
 	Fixed(const Fixed &other);
+	Fixed &operator=(const Fixed &other);
 	~Fixed();
 
-	Fixed &operator=(const Fixed &other);
 	bool operator>(const Fixed &other);
 	bool operator>=(const Fixed &other);
 	bool operator<(const Fixed &other);

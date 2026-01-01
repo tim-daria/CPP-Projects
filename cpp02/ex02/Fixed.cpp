@@ -30,6 +30,14 @@ Fixed::Fixed(const Fixed &other) {
 	fixedValue = other.fixedValue;
 }
 
+Fixed &Fixed::operator=(const Fixed &other)
+{
+	if (this != &other) {
+		fixedValue = other.fixedValue;
+	}
+	return *this;
+}
+
 Fixed::~Fixed() {}
 
 void Fixed::setFixedValue(const int value) {
@@ -46,14 +54,6 @@ int Fixed::toInt(void) const
 {
 	int result = fixedValue >> numBits;
 	return (result);
-}
-
-Fixed &Fixed::operator=(const Fixed &other)
-{
-	if (this != &other) {
-		fixedValue = other.fixedValue;
-	}
-	return *this;
 }
 
 bool Fixed::operator>(const Fixed &other) {
@@ -100,7 +100,7 @@ Fixed Fixed::operator*(const Fixed &obj)
 {
 	Fixed sum;
 
-	sum.setFixedValue((fixedValue * obj.fixedValue) >> numBits);
+	sum.setFixedValue((fixedValue >> numBits) * obj.fixedValue);
 	return sum;
 }
 

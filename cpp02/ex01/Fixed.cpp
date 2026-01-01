@@ -37,18 +37,6 @@ Fixed::Fixed(const Fixed &other) {
 	fixedValue = other.fixedValue;
 }
 
-float Fixed::toFloat(void) const
-{
-	float result = static_cast<float>(fixedValue) / (1 << numBits);
-	return (result);
-}
-
-int Fixed::toInt(void) const
-{
-	int result = fixedValue >> numBits;
-	return (result);
-}
-
 Fixed &Fixed::operator=(const Fixed &other)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
@@ -60,6 +48,18 @@ Fixed &Fixed::operator=(const Fixed &other)
 
 Fixed::~Fixed() {
 	std::cout << "Destructor called" << std::endl;
+}
+
+float Fixed::toFloat(void) const
+{
+	float result = static_cast<float>(fixedValue) / (1 << numBits);
+	return (result);
+}
+
+int Fixed::toInt(void) const
+{
+	int result = fixedValue >> numBits;
+	return (result);
 }
 
 std::ostream &operator<<(std::ostream &out, const Fixed &obj)
