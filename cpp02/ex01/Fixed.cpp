@@ -12,6 +12,7 @@
 
 #include <iostream>
 #include <string>
+#include <math.h>
 #include "Fixed.hpp"
 
 const int Fixed::numBits = 8;
