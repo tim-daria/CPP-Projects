@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dtimofee <dtimofee@student.42berlin.de>    #+#  +:+       +#+        */
+/*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-12-27 17:35:09 by dtimofee          #+#    #+#             */
-/*   Updated: 2025-12-27 17:35:09 by dtimofee         ###   ########.fr       */
+/*   Created: 2025/12/27 17:35:09 by dtimofee          #+#    #+#             */
+/*   Updated: 2026/01/02 15:54:15 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #include "ClapTrap.hpp"
 
 
-ClapTrap::ClapTrap() {
+ClapTrap::ClapTrap():
+	name("Default"), hitPoints(0), energyPoints(0), attackDamage(0) {
 	std::cout << "Default ClapTrap constructor called" << std::endl;
 }
 
