@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dtimofee <dtimofee@student.42berlin.de>    #+#  +:+       +#+        */
+/*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-12-30 19:27:18 by dtimofee          #+#    #+#             */
-/*   Updated: 2025-12-30 19:27:18 by dtimofee         ###   ########.fr       */
+/*   Created: 2025/12/30 19:27:18 by dtimofee          #+#    #+#             */
+/*   Updated: 2026/01/02 16:08:41 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ DiamondTrap::DiamondTrap(const std::string &name):
 ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name), name(name)
 {
 	hitPoints = FragTrap::hitPoints;
-	energyPoints = ScavTrap::energyPoints;
+	energyPoints = 50;
 	attackDamage = FragTrap::attackDamage;
 	std::cout << "Constructor DiamondTrap(const std::string) called" << std::endl;
 }
