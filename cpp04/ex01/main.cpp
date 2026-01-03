@@ -12,39 +12,38 @@
 
 #include <iostream>
 #include "Animal.hpp"
-#include "WrongAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "WrongCat.hpp"
+
 
 int main()
 {
-	{
-		const Animal* meta = new Animal();
-		const Animal* j = new Dog();
-		const Animal* i = new Cat();
-		std::cout << j->getType() << " " << std::endl;
-		std::cout << i->getType() << " " << std::endl;
-		i->makeSound(); //will output the cat sound!
-		j->makeSound();
-		meta->makeSound();
+	int animalsCount = 4;
+	Animal *animals[animalsCount];
 
-		delete meta;
-		delete j;
-		delete i;
+	for (int i = 0; i < animalsCount; i++) {
+		if (i % 2) {
+			animals[i] = new Cat();
+		} else {
+			animals[i] = new Dog();
+		}
 	}
-	{
-		const WrongAnimal* meta = new WrongAnimal();
-		const WrongAnimal* i = new WrongCat();
-		const WrongCat *j = new WrongCat();
-		std::cout << i->getType() << " " << std::endl;
-		meta->makeSound();
-		i->makeSound(); //will not output the cat sound!
-		j->makeSound();
 
-		delete meta;
-		delete i;
-		delete j;
+	Dog lupa;
+	Dog pupa(lupa);
+
+	lupa.setIdeatoBrain("I'm smart", 0);
+	std::cout << "lupa's first idea: " << lupa.getIdeafromBrain(0) << "\npupa's first idea: " << pupa.getIdeafromBrain(0) << std::endl;
+	pupa.setIdeatoBrain("I'm happy", 0);
+	std::cout << "lupa's first idea: " << lupa.getIdeafromBrain(0) << "\npupa's first idea: " << pupa.getIdeafromBrain(0) << std::endl;
+	pupa = lupa;
+	std::cout << "lupa's first idea: " << lupa.getIdeafromBrain(0) << "\npupa's first idea: " << pupa.getIdeafromBrain(0) << std::endl;
+
+	lupa.setIdeatoBrain("I'm happy", 0);
+	std::cout << "lupa's first idea: " << lupa.getIdeafromBrain(0) << "\npupa's first idea: " << pupa.getIdeafromBrain(0) << std::endl;
+
+	for (int i = 0; i < animalsCount; i++) {
+		delete animals[i];
 	}
-	return 0;
+	return (0);
 }
