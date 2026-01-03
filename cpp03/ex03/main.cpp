@@ -21,16 +21,17 @@ int main(void)
 		DiamondTrap a("Boo");
 		DiamondTrap b("Hoo");
 		DiamondTrap c;
+		c = *&c;
 
-		a.attack("Hoo");
-		b.takeDamage(20);
-		a.attack("Hoo");
-		b.takeDamage(20);
-		b.beRepaired(10);
+		c.attack("Hoo");
+		c.takeDamage(20);
 		a.attack("Hoo");
 		b.takeDamage(20);
 		b.beRepaired(10);
-		a.whoAmI();
+		a.attack("Hoo");
+		b.takeDamage(20);
+		b.beRepaired(10);
+		c.whoAmI();
 	}
 	{
 		DiamondTrap a("Alpha");

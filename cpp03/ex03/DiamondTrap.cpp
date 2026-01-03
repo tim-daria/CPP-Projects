@@ -14,17 +14,15 @@
 #include "DiamondTrap.hpp"
 
 
-DiamondTrap::DiamondTrap(): ScavTrap(), FragTrap(){
+DiamondTrap::DiamondTrap(): ClapTrap("Default_clap_name") ,ScavTrap(), FragTrap(), name("Default") {
 	std::cout << "Default DiamondTrap constructor called" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const std::string &name):
 ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name), name(name)
 {
-	hitPoints = FragTrap::hitPoints;
-	energyPoints = 50;
-	attackDamage = FragTrap::attackDamage;
 	std::cout << "Constructor DiamondTrap(const std::string) called" << std::endl;
+	energyPoints = 50;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap &other): ClapTrap(other), ScavTrap(other),FragTrap(other) {
