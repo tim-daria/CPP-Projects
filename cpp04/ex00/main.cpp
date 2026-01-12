@@ -32,6 +32,7 @@ int main()
 		delete meta;
 		delete j;
 		delete i;
+
 	}
 	{
 		const WrongAnimal* meta = new WrongAnimal();

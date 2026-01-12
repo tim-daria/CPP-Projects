@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 
@@ -19,7 +19,7 @@
 int main()
 {
 	int animalsCount = 4;
-	Animal *animals[animalsCount];
+	AAnimal *animals[animalsCount];
 
 	for (int i = 0; i < animalsCount; i++) {
 		if (i % 2) {
@@ -32,12 +32,7 @@ int main()
 	Dog lupa;
 	Dog pupa(lupa);
 
-
-	{
-		Animal tuta = Dog();
-	}
-
-	lupa.setIdeatoBrain("I'm smart", 120);
+	lupa.setIdeatoBrain("I'm smart", 0);
 	std::cout << "lupa's first idea: " << lupa.getIdeafromBrain(0) << "\npupa's first idea: " << pupa.getIdeafromBrain(0) << std::endl;
 	pupa.setIdeatoBrain("I'm happy", 0);
 	std::cout << "lupa's first idea: " << lupa.getIdeafromBrain(0) << "\npupa's first idea: " << pupa.getIdeafromBrain(0) << std::endl;
