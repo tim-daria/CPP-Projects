@@ -3,24 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dtimofee <dtimofee@student.42berlin.de>    #+#  +:+       +#+        */
+/*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-01-27 13:01:05 by dtimofee          #+#    #+#             */
-/*   Updated: 2026-01-27 13:01:05 by dtimofee         ###   ########.fr       */
+/*   Created: 2026/01/27 13:01:05 by dtimofee          #+#    #+#             */
+/*   Updated: 2026/01/30 15:26:29 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORM_H
 #define FORM_H
 
-#include "Bureaucrat.hpp"
 #include <string>
+
+class Bureaucrat;
 
 class Form
 {
 	private:
 	const std::string _name;
-	bool _signedStatus;
+	bool _isSigned;
 	const int _signGrade;
 	const int _executeGrade;
 
@@ -36,7 +37,7 @@ class Form
 	int getSignGrade() const;
 	int getExecuteGrade() const;
 
-	void beSigned(const Bureaucrat &obj);
+	void beSigned(const Bureaucrat &b);
 
 	class GradeTooHighException: public std::exception {
 		public:
