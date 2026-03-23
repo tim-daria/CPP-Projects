@@ -12,26 +12,40 @@
 
 #include <iostream>
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "forms/ShrubberyCreationForm.hpp"
+#include "forms/RobotomyRequestForm.hpp"
+#include "forms/PresidentialPardonForm.hpp"
 
 int main(void)
 {
 	try {
-		Bureaucrat Sam("Sam", 100);
+		Bureaucrat Sam("Sam", 147);
 		Bureaucrat Paul("Paul", 1);
-		Bureaucrat Martin(Paul);
 
-		Form registration("Registration form", 90, 50);
+		ShrubberyCreationForm shrub("home");
+		RobotomyRequestForm rob("kitchen");
+		PresidentialPardonForm president("You");
 
-		std::cout << Sam << Paul << Martin;
+		std::srand(std::time(0));
+		std::cout << Sam << Paul;
+		Paul.signForm(president);
+		Paul.executeForm(president);
 		Sam.incrementGrade();
 		Paul.decrementGrade();
-		Sam.signForm(registration);
-		std::cout << Sam << Paul << Martin;
+		std::cout << Sam << Paul;
+		Paul.executeForm(shrub);
+		Sam.signForm(shrub);
+		Paul.signForm(shrub);
+		Paul.signForm(rob);
+		Sam.executeForm(rob);
+		Paul.executeForm(rob);
 		Paul = Sam;
-		std::cout << Sam << Paul << Martin;
-		Martin.incrementGrade();
-		Martin.decrementGrade();
+		std::cout << Sam << Paul;
+		for (int i = 0; i < 10; i++) {
+			Sam.incrementGrade();
+		}
+		std::cout << Sam << Paul;
+		Sam.executeForm(shrub);
 	}
 	catch (std::exception & e) {
 		std::cerr << e.what() << std::endl;

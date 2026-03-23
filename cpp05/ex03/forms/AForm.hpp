@@ -10,14 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_H
-#define FORM_H
+#pragma once
 
 #include <string>
 
 class Bureaucrat;
 
-class Form
+class AForm
 {
 	private:
 	const std::string _name;
@@ -25,12 +24,15 @@ class Form
 	const int _signGrade;
 	const int _executeGrade;
 
+	protected:
+	virtual void make_action() const = 0;
+
 	public:
-	Form();
-	Form(const std::string &name, int signGrade, int executeGrade);
-	Form(const Form &other);
-	Form &operator=(const Form &other);
-	~Form();
+	AForm();
+	AForm(const std::string &name, int signGrade, int executeGrade);
+	AForm(const AForm &other);
+	AForm &operator=(const AForm &other);
+	virtual ~AForm();
 
 	const std::string &getName() const;
 	bool getSignStatus() const;
@@ -38,6 +40,7 @@ class Form
 	int getExecuteGrade() const;
 
 	int beSigned(const Bureaucrat &obj);
+	void execute(Bureaucrat const &executor) const;
 
 	class GradeTooHighException: public std::exception {
 		public:
@@ -47,8 +50,11 @@ class Form
 		public:
 		const char *what() const throw();
 	};
+	class FormNotSignedException: public std::exception {
+		public:
+		const char *what() const throw();
+	};
 };
 
-std::ostream &operator<<(std::ostream &out, const Form &obj);
+std::ostream &operator<<(std::ostream &out, const AForm &obj);
 
-#endif
