@@ -1,38 +1,39 @@
-/* ************************************************************************** */
+/* **************************************************************************
+ */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dtimofee <dtimofee@student.42berlin.de>    #+#  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-12-27 17:35:03 by dtimofee          #+#    #+#             */
-/*   Updated: 2025-12-27 17:35:03 by dtimofee         ###   ########.fr       */
+/*                                                        :::      :::::::: */
+/*   ClapTrap.hpp                                       :+:      :+:    :+: */
+/*                                                    +:+ +:+         +:+ */
+/*   By: dtimofee <dtimofee@student.42berlin.de>    #+#  +:+       +#+ */
+/*                                                +#+#+#+#+#+   +#+ */
+/*   Created: 2025-12-27 17:35:03 by dtimofee          #+#    #+# */
+/*   Updated: 2025-12-27 17:35:03 by dtimofee         ###   ########.fr */
 /*                                                                            */
-/* ************************************************************************** */
+/* **************************************************************************
+ */
 
 #ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
 #include <string>
 
-class ClapTrap
-{
-	protected:
-	std::string name;
-	unsigned int hitPoints;
-	unsigned int energyPoints;
-	unsigned int attackDamage;
+class ClapTrap {
+ protected:
+  std::string name;
+  unsigned int hitPoints;
+  unsigned int energyPoints;
+  unsigned int attackDamage;
 
-	public:
-	ClapTrap();
-	ClapTrap(const std::string &name);
-	ClapTrap(const ClapTrap &other);
-	ClapTrap &operator=(const ClapTrap &other);
-	~ClapTrap();
+ public:
+  ClapTrap();
+  ClapTrap(const std::string& name);
+  ClapTrap(const ClapTrap& other);
+  ClapTrap& operator=(const ClapTrap& other);
+  ~ClapTrap();
 
-	virtual void attack(const std::string& target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
+  virtual void attack(const std::string& target);
+  void takeDamage(unsigned int amount);
+  void beRepaired(unsigned int amount);
 };
 
 #endif

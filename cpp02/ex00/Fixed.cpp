@@ -1,49 +1,46 @@
-/* ************************************************************************** */
+/* **************************************************************************
+ */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Fixed.cpp                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/22 16:48:39 by dtimofee          #+#    #+#             */
-/*   Updated: 2025/12/23 15:52:10 by dtimofee         ###   ########.fr       */
+/*                                                        :::      :::::::: */
+/*   Fixed.cpp                                          :+:      :+:    :+: */
+/*                                                    +:+ +:+         +:+ */
+/*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+ */
+/*                                                +#+#+#+#+#+   +#+ */
+/*   Created: 2025/12/22 16:48:39 by dtimofee          #+#    #+# */
+/*   Updated: 2025/12/23 15:52:10 by dtimofee         ###   ########.fr */
 /*                                                                            */
-/* ************************************************************************** */
+/* **************************************************************************
+ */
+
+#include "Fixed.hpp"
 
 #include <iostream>
 #include <string>
-#include "Fixed.hpp"
 
 const int Fixed::numBits = 8;
 
-Fixed::Fixed(): fixedValue(0) {
-	std::cout << "Default constructor called" << std::endl;
+Fixed::Fixed() : fixedValue(0) {
+  std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &other) {
-	std::cout << "Copy constructor called" << std::endl;
-	fixedValue = other.fixedValue;
+Fixed::Fixed(const Fixed& other) {
+  std::cout << "Copy constructor called" << std::endl;
+  fixedValue = other.fixedValue;
 }
 
-Fixed &Fixed::operator=(const Fixed &other)
-{
-	std::cout << "Copy assignment operator called" << std::endl;
-	if (this != &other) {
-		fixedValue = other.fixedValue;
-	}
-	return *this;
+Fixed& Fixed::operator=(const Fixed& other) {
+  std::cout << "Copy assignment operator called" << std::endl;
+  if (this != &other) {
+    fixedValue = other.fixedValue;
+  }
+  return *this;
 }
 
-Fixed::~Fixed() {
-	std::cout << "Destructor called" << std::endl;
+Fixed::~Fixed() { std::cout << "Destructor called" << std::endl; }
+
+int Fixed::getRawBits(void) const {
+  std::cout << "getRawBits member function called" << std::endl;
+  return (fixedValue);
 }
 
-int Fixed::getRawBits(void) const
-{
-	std::cout << "getRawBits member function called" << std::endl;
-	return (fixedValue);
-}
-
-void Fixed::setRawBits(int const raw) {
-	fixedValue = raw;
-}
+void Fixed::setRawBits(int const raw) { fixedValue = raw; }
