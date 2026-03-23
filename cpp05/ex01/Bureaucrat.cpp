@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dtimofee <dtimofee@student.42berlin.de>    #+#  +:+       +#+        */
+/*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-01-25 19:46:19 by dtimofee          #+#    #+#             */
-/*   Updated: 2026-01-25 19:46:19 by dtimofee         ###   ########.fr       */
+/*   Created: 2026/01/25 19:46:19 by dtimofee          #+#    #+#             */
+/*   Updated: 2026/01/30 15:29:23 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

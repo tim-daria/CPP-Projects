@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dtimofee <dtimofee@student.42berlin.de>    #+#  +:+       +#+        */
+/*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-01-25 18:44:17 by dtimofee          #+#    #+#             */
-/*   Updated: 2026-01-25 18:44:17 by dtimofee         ###   ########.fr       */
+/*   Created: 2026/01/25 18:44:17 by dtimofee          #+#    #+#             */
+/*   Updated: 2026/01/30 15:18:06 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int main(void)
 		Bureaucrat Sam("Sam", 100);
 		Bureaucrat Paul("Paul", 1);
 		Bureaucrat Martin(Paul);
+		Form Anmeldung("anmeldung", 50, 50);
 
 		Form registration("Registration form", 90, 50);
 
@@ -30,8 +31,8 @@ int main(void)
 		std::cout << Sam << Paul << Martin;
 		Paul = Sam;
 		std::cout << Sam << Paul << Martin;
-		Martin.incrementGrade();
-		Martin.decrementGrade();
+		Paul.signForm(Anmeldung);
+		Sam.signForm(Anmeldung);
 	}
 	catch (std::exception & e) {
 		std::cerr << e.what() << std::endl;
