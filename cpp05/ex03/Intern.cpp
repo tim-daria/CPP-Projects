@@ -57,7 +57,5 @@ AForm *Intern::makeForm(const std::string &formName, const std::string &formTarg
 			return forms[i].create(formTarget);
 		}
 	}
-	// std::cout << "Form not found" << std::endl;
-	// return NULL;
 	throw Intern::FormNotFoundExeption();
 }
