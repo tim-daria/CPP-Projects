@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dtimofee <dtimofee@student.42berlin.de>    #+#  +:+       +#+        */
+/*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-01-25 19:46:19 by dtimofee          #+#    #+#             */
-/*   Updated: 2026-01-25 19:46:19 by dtimofee         ###   ########.fr       */
+/*   Created: 2026/01/25 19:46:19 by dtimofee          #+#    #+#             */
+/*   Updated: 2026/05/08 12:06:13 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,6 @@ const char *Bureaucrat::GradeTooLowException::what() const throw() {
 }
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &obj) {
-	out << obj.getName() << ", bureaucrat grade " << obj.getGrade() << std::endl;
+	out << obj.getName() << ", bureaucrat's grade " << obj.getGrade() << std::endl;
 	return out;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dtimofee <dtimofee@student.42berlin.de>    #+#  +:+       +#+        */
+/*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-03-23 10:30:09 by dtimofee          #+#    #+#             */
-/*   Updated: 2026-03-23 10:30:09 by dtimofee         ###   ########.fr       */
+/*   Created: 2026/03/23 10:30:09 by dtimofee          #+#    #+#             */
+/*   Updated: 2026/05/08 13:33:17 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ const std::string &ShrubberyCreationForm::getTarget() const {
 }
 
 void ShrubberyCreationForm::make_action() const {
-	std::ofstream file(getTarget() + "_shrubbery");
+	std::ofstream file((getTarget() + "_shrubbery").c_str());
 	file << "   *   " << std::endl;
 	file << "  ***  " << std::endl;
 	file << " ***** " << std::endl;

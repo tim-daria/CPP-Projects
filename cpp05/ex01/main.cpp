@@ -6,7 +6,7 @@
 /*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 18:44:17 by dtimofee          #+#    #+#             */
-/*   Updated: 2026/01/30 15:18:06 by dtimofee         ###   ########.fr       */
+/*   Updated: 2026/05/08 12:08:31 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(void)
 		Bureaucrat Paul("Paul", 1);
 		Bureaucrat Martin(Paul);
 
-		Form Anmeldung("anmeldung", 50, 50);
+		Form Anmeldung("Anmeldung", 50, 50);
 		Form Registration("Registration form", 90, 50);
 
 		std::cout << Sam << Paul << Martin;
@@ -32,7 +32,7 @@ int main(void)
 		Paul = Sam;
 		std::cout << Sam << Paul << Martin;
 		Paul.signForm(Anmeldung);
-		Sam.signForm(Anmeldung);
+		Martin.signForm(Anmeldung);
 	}
 	catch (std::exception & e) {
 		std::cerr << e.what() << std::endl;
