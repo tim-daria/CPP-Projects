@@ -16,7 +16,7 @@
 
 struct FormType {
 	std::string name;
-	AForm *(*create)(std::string);
+	AForm *(*create)(const std::string &);
 };
 
 class Intern

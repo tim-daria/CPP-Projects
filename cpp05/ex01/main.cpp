@@ -20,14 +20,14 @@ int main(void)
 		Bureaucrat Sam("Sam", 100);
 		Bureaucrat Paul("Paul", 1);
 		Bureaucrat Martin(Paul);
-		Form Anmeldung("anmeldung", 50, 50);
 
-		Form registration("Registration form", 90, 50);
+		Form Anmeldung("anmeldung", 50, 50);
+		Form Registration("Registration form", 90, 50);
 
 		std::cout << Sam << Paul << Martin;
 		Sam.incrementGrade();
 		Paul.decrementGrade();
-		Sam.signForm(registration);
+		Sam.signForm(Registration);
 		std::cout << Sam << Paul << Martin;
 		Paul = Sam;
 		std::cout << Sam << Paul << Martin;

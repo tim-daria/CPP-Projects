@@ -33,15 +33,15 @@ const char *Intern::FormNotFoundExeption::what() const throw() {
     return "Form not found";
 }
 
-static AForm *make_shrub_creation(std::string target) {
+static AForm *make_shrub_creation(const std::string &target) {
 	return new ShrubberyCreationForm(target);
 }
 
-static AForm *make_rob_request(std::string target) {
+static AForm *make_rob_request(const std::string &target) {
 	return new RobotomyRequestForm(target);
 }
 
-static AForm *make_pardon(std::string target) {
+static AForm *make_pardon(const std::string &target) {
 	return new PresidentialPardonForm(target);
 }
 
