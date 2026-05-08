@@ -6,7 +6,7 @@
 /*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 19:46:19 by dtimofee          #+#    #+#             */
-/*   Updated: 2026/05/08 12:07:12 by dtimofee         ###   ########.fr       */
+/*   Updated: 2026/05/08 15:34:01 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,13 @@ void Bureaucrat::decrementGrade() {
 
 void Bureaucrat::signForm(Form &form) {
 	try {
-		form.beSigned(*this);
-		std::cout << _name << " signed " << form.getName() << std::endl;
+		if (!form.getSignStatus()) {
+			form.beSigned(*this);
+			std::cout << _name << " signed " << form.getName() << std::endl;
+		}
+		else {
+			std::cout << "Form is already signed" << std::endl;
+		}
 	}
 	catch (std::exception & e) {
 		std::cout << _name << " couldn’t sign " << form.getName()

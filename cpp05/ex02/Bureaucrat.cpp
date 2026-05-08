@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dtimofee <dtimofee@student.42berlin.de>    #+#  +:+       +#+        */
+/*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-01-25 19:46:19 by dtimofee          #+#    #+#             */
-/*   Updated: 2026-01-25 19:46:19 by dtimofee         ###   ########.fr       */
+/*   Created: 2026/01/25 19:46:19 by dtimofee          #+#    #+#             */
+/*   Updated: 2026/05/08 15:35:40 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,13 @@ void Bureaucrat::decrementGrade() {
 
 void Bureaucrat::signForm(AForm &form) {
 	try {
-		form.beSigned(*this);
-		std::cout << _name << " signed " << form.getName() << std::endl;
+		if (!form.getSignStatus()) {
+			form.beSigned(*this);
+			std::cout << _name << " signed " << form.getName() << std::endl;
+		}
+		else {
+			std::cout << "Form is already signed" << std::endl;
+		}
 	}
 	catch (std::exception &e) {
 		std::cout << _name << " couldn’t sign " << form.getName()

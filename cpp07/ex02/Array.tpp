@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Array.tpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dtimofee <dtimofee@student.42berlin.de>    #+#  +:+       +#+        */
+/*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-03-25 16:41:51 by dtimofee          #+#    #+#             */
-/*   Updated: 2026-03-25 16:41:51 by dtimofee         ###   ########.fr       */
+/*   Created: 2026/03/25 16:41:51 by dtimofee          #+#    #+#             */
+/*   Updated: 2026/05/08 14:42:16 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
 
 template <typename T>
-Array<T>::Array(): _size(0), _elements(nullptr) {};
+Array<T>::Array(): _size(0), _elements(NULL) {};
 
 template <typename T>
 Array<T>::Array(unsigned int n): _size(n), _elements(new T[n]()) {};

@@ -6,7 +6,7 @@
 /*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 18:44:17 by dtimofee          #+#    #+#             */
-/*   Updated: 2026/05/08 12:08:31 by dtimofee         ###   ########.fr       */
+/*   Updated: 2026/05/08 15:32:47 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int main(void)
 		Paul = Sam;
 		std::cout << Sam << Paul << Martin;
 		Paul.signForm(Anmeldung);
+		Martin.signForm(Anmeldung);
 		Martin.signForm(Anmeldung);
 	}
 	catch (std::exception & e) {
