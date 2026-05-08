@@ -6,7 +6,7 @@
 /*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 16:41:51 by dtimofee          #+#    #+#             */
-/*   Updated: 2026/05/08 14:42:16 by dtimofee         ###   ########.fr       */
+/*   Updated: 2026/05/08 19:24:01 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,14 @@ unsigned int Array<T>::size() const {
 
 template <typename T>
 T &Array<T>::operator[](unsigned int i) {
+	if (i >= _size) {
+		throw Array<T>::OutOfRangeException();
+	}
+	return _elements[i];
+}
+
+template <typename T>
+const T &Array<T>::operator[](unsigned int i) const {
 	if (i >= _size) {
 		throw Array<T>::OutOfRangeException();
 	}

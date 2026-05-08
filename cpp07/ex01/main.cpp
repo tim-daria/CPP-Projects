@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dtimofee <dtimofee@student.42berlin.de>    #+#  +:+       +#+        */
+/*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-03-24 10:28:39 by dtimofee          #+#    #+#             */
-/*   Updated: 2026-03-24 10:28:39 by dtimofee         ###   ########.fr       */
+/*   Created: 2026/03/24 10:28:39 by dtimofee          #+#    #+#             */
+/*   Updated: 2026/05/08 15:53:14 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

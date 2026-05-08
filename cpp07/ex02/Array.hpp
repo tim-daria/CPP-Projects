@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dtimofee <dtimofee@student.42berlin.de>    #+#  +:+       +#+        */
+/*   By: dtimofee <dtimofee@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-03-25 16:19:04 by dtimofee          #+#    #+#             */
-/*   Updated: 2026-03-25 16:19:04 by dtimofee         ###   ########.fr       */
+/*   Created: 2026/03/25 16:19:04 by dtimofee          #+#    #+#             */
+/*   Updated: 2026/05/08 19:28:32 by dtimofee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ class Array
 	~Array();
 
 	unsigned int size() const;
-	T &operator[](unsigned int i);
+	T &operator[] (unsigned int i);
+	const T &operator[](unsigned int i) const;
 
 	class OutOfRangeException: public std::exception {
 		public:
